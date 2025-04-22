@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة حمد الطبية</title>
+    <title>الخدمات | مؤسسة حمد الطبية</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
-        /* خلفية متدرجة للموقع */
         body {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: #fff;
             font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
         }
 
-        /* تصميم شريط التنقل */
         nav {
+            background-color: #2c3e50;
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px 0;
+            padding: 10px 0;
             z-index: 1000;
         }
 
@@ -54,54 +48,35 @@
             border-radius: 5px;
         }
 
-        /* قسم المحتوى الرئيسي */
-        .main-content {
+        /* محتوى الخدمة */
+        .services-content {
+            padding-top: 150px; /* لتجنب تغطيته بشريط التنقل */
             text-align: center;
-            padding-top: 150px;
-            padding-bottom: 50px;
+            background-color: #fff;
+            padding: 50px 0;
         }
 
-        .main-content h1 {
-            font-size: 60px;
-            font-weight: bold;
+        .services-content h1 {
+            font-size: 40px;
             color: #f39c12;
             margin-bottom: 20px;
         }
 
-        .main-content p {
-            font-size: 22px;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto 30px;
-        }
-
-        /* قسم القيم والرؤية والرسالة والأهداف */
-        .values-goals-section {
-            background-color: #ffffff;
-            padding: 40px 0;
-            margin-top: 50px;
-        }
-
-        .values-goals-section h2 {
-            font-size: 36px;
-            color: #333;
+        .service-item {
             margin-bottom: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .values-goals-section h3 {
-            font-size: 30px;
-            color: #f39c12;
-            margin-bottom: 15px;
-        }
-
-        .values-goals-section p, .values-goals-section ul {
-            font-size: 18px;
+        .service-item h3 {
             color: #333;
+            margin-bottom: 10px;
         }
 
-        .values-goals-section ul {
-            list-style-type: square;
-            margin-left: 20px;
+        .service-item p {
+            color: #555;
         }
 
         footer {
@@ -109,6 +84,11 @@
             color: white;
             text-align: center;
             padding: 20px;
+        }
+
+        /* تحديد اتجاه النص من اليمين لليسار */
+        body, html {
+            direction: rtl; /* تأكد من أن النص يظهر من اليمين لليسار */
         }
     </style>
 </head>
@@ -124,43 +104,24 @@
         </ul>
     </nav>
 
-    <!-- المحتوى الرئيسي عن المؤسسة -->
-    <div class="main-content" data-aos="fade-up">
-        <h1>مرحبا بكم في مؤسسة حمد الطبية</h1>
-        <p>نحن نقدم رعاية صحية عالية الجودة لجميع أفراد المجتمع. نعمل على توفير بيئة صحية تهدف إلى تحسين جودة حياة المرضى وعائلاتهم.</p>
-    </div>
-
-    <!-- قسم القيم والرؤية والرسالة والأهداف -->
-    <div class="values-goals-section">
-        <h2>القيم، الرؤية، الرسالة والأهداف</h2>
-
-        <div class="section" data-aos="fade-up">
-            <h3>الرؤية</h3>
-            <p>أن نكون رائدين في توفير الرعاية الصحية الممتازة والمبتكرة لأفراد المجتمع.</p>
-        </div>
-
-        <div class="section" data-aos="fade-up">
-            <h3>الرسالة</h3>
-            <p>تقديم خدمات صحية عالية الجودة تعكس الالتزام بالمهنية والرعاية الإنسانية، من خلال بيئة صحية مبتكرة ومتطورة.</p>
-        </div>
-
-        <div class="section" data-aos="fade-up">
-            <h3>القيم</h3>
-            <ul>
-                <li>الاحترام</li>
-                <li>الاحترافية</li>
-                <li>الشفافية</li>
-                <li>الابتكار</li>
-            </ul>
-        </div>
-
-        <div class="section" data-aos="fade-up">
-            <h3>الأهداف</h3>
-            <ul>
-                <li>تحقيق أفضل مستويات الرعاية الصحية</li>
-                <li>توفير بيئة طبية آمنة وفعالة</li>
-                <li>الابتكار في تقديم الحلول العلاجية</li>
-            </ul>
+    <!-- محتوى الخدمات -->
+    <div class="services-content" data-aos="fade-up">
+        <h1>خدماتنا</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 service-item" data-aos="fade-up">
+                    <h3>خدمة الاستشارات الطبية</h3>
+                    <p>نحن نقدم استشارات طبية شاملة في جميع التخصصات لضمان أفضل الرعاية الصحية للمرضى.</p>
+                </div>
+                <div class="col-md-4 service-item" data-aos="fade-up">
+                    <h3>التشخيص والعلاج</h3>
+                    <p>نقوم بتقديم خدمات التشخيص المتقدمة مع أحدث التكنولوجيا الطبية لتقديم العلاج الأمثل.</p>
+                </div>
+                <div class="col-md-4 service-item" data-aos="fade-up">
+                    <h3>الرعاية الطبية المنزلية</h3>
+                    <p>نحن نقدم خدمات الرعاية الصحية المنزلية المتكاملة لمرضانا في راحة منازلهم.</p>
+                </div>
+            </div>
         </div>
     </div>
 
