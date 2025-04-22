@@ -1,91 +1,199 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة حمد الطبية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
+        /* خلفية الموقع مع صورة */
         body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            direction: rtl;
-            text-align: right;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed; /* يمكنك تغيير الصورة هنا */
+            background-size: cover;
+            color: white;
         }
-        header, footer {
-            background-color: #006D77;
+
+        /* شريط التنقل العلوي */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+
+        /* قسم المحتوى الرئيسي */
+        .main-content {
+            text-align: center;
+            padding-top: 150px; /* لتجنب تغطيته بشريط التنقل */
+            padding-bottom: 50px;
+        }
+
+        .main-content h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 22px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        /* نبذة عن المؤسسة */
+        .about-section {
+            padding: 50px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .about-section h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* الأقسام الملوّنة أسفل العنوان */
+        .info-sections {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .info-sections .section {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-sections .section h3 {
+            margin-bottom: 15px;
+        }
+
+        .info-sections .section p {
+            font-size: 18px;
+            color: #f39c12;
+        }
+
+        /* تأثيرات التمرير */
+        .aos-item {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #2c3e50;
             color: white;
             text-align: center;
             padding: 20px;
         }
-        section {
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h2 {
-            color: #006D77;
-        }
-        ul {
-            padding-right: 20px;
-        }
-        a {
-            color: #004e56;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>مؤسسة حمد الطبية</h1>
-        <p>الرعاية الصحية الرائدة في دولة قطر</p>
-    </header>
 
-    <section>
-        <h2>من نحن</h2>
-        <p>
-            تأسست مؤسسة حمد الطبية عام 1979، وتُعد المزود الرئيسي للرعاية الصحية في قطر، حيث تقدم خدماتها للمواطنين والمقيمين بجودة عالية.
-        </p>
-    </section>
-
-    <section>
-        <h2>خدماتنا</h2>
+    <!-- شريط التنقل -->
+    <nav>
         <ul>
-            <li>مستشفى حمد العام</li>
-            <li>مستشفى القلب</li>
-            <li>مركز قطر لإعادة التأهيل</li>
-            <li>مستشفى النساء</li>
-            <li>مركز الأمراض الانتقالية</li>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about-hamad-page.html">عن المؤسسة</a></li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section>
-        <h2>التعليم والبحوث</h2>
-        <p>
-            تسهم المؤسسة في البحث والتعليم من خلال النظام الصحي الأكاديمي ومعهد الجودة.
-        </p>
-    </section>
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content" data-aos="fade-up">
+        <h1>مرحبا بكم في مؤسسة حمد الطبية</h1>
+        <p>نحن نقدم رعاية صحية عالية الجودة لجميع أفراد المجتمع. نعمل على توفير بيئة صحية تهدف إلى تحسين جودة حياة المرضى وعائلاتهم.</p>
+    </div>
 
-    <section>
-        <h2>انضم إلينا</h2>
-        <p>
-            للاطلاع على الوظائف، يرجى زيارة <a href="https://www.hamad.qa/ar/pages/default.aspx" target="_blank">صفحة الوظائف</a>.
-        </p>
-    </section>
+    <!-- نبذة عن المؤسسة -->
+    <div class="about-section">
+        <h3>نبذة عن مؤسسة حمد الطبية</h3>
+        <p>مؤسسة حمد الطبية هي إحدى المؤسسات الرائدة في مجال الرعاية الصحية في دولة قطر. تأسست في عام 1982 بهدف تقديم خدمات طبية عالية الجودة للمرضى المحليين والدوليين. منذ تأسيسها، أصبحت مؤسسة حمد الطبية رمزًا للرعاية الصحية المتميزة في منطقة الخليج.</p>
+    </div>
 
-    <section>
-        <h2>تواصل معنا</h2>
-        <p>
-            📍 الدوحة، قطر<br>
-            ☎️ +974 4439 5777<br>
-            📧 contactus@hamad.qa
-        </p>
-    </section>
+    <!-- الأقسام الملوّنة -->
+    <div class="info-sections">
+        <div class="section" data-aos="fade-up">
+            <h3>الرؤية</h3>
+            <p>أن نكون رائدين في توفير الرعاية الصحية الممتازة والمبتكرة لأفراد المجتمع.</p>
+        </div>
+        <div class="section" data-aos="fade-up">
+            <h3>الرسالة</h3>
+            <p>تقديم خدمات صحية عالية الجودة تعكس الالتزام بالمهنية والرعاية الإنسانية، من خلال بيئة صحية مبتكرة ومتطورة.</p>
+        </div>
+        <div class="section" data-aos="fade-up">
+            <h3>القيم</h3>
+            <ul>
+                <li>الاحترام</li>
+                <li>الاحترافية</li>
+                <li>الشفافية</li>
+                <li>الابتكار</li>
+            </ul>
+        </div>
+        <div class="section" data-aos="fade-up">
+            <h3>الأهداف</h3>
+            <ul>
+                <li>تحقيق أفضل مستويات الرعاية الصحية</li>
+                <li>توفير بيئة طبية آمنة وفعالة</li>
+                <li>الابتكار في تقديم الحلول العلاجية</li>
+            </ul>
+        </div>
+    </div>
 
+    <!-- إضافة مكتبة AOS لتفعيل التأثيرات -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // تفعيل التأثيرات
+    </script>
+
+    <!-- الفوتر -->
     <footer>
-        &copy; 2025 مؤسسة حمد الطبية – جميع الحقوق محفوظة
+        <p>&copy; 2025 مؤسسة حمد الطبية. جميع الحقوق محفوظة.</p>
     </footer>
+
 </body>
 </html>
