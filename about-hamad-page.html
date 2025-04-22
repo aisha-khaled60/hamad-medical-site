@@ -51,7 +51,7 @@
 
         /* قسم عن المؤسسة */
         .about-content {
-            padding-top: 150px;
+            padding-top: 150px; /* لتجنب تغطيته بشريط التنقل */
             text-align: center;
             background-color: #fff;
             padding: 50px 0;
@@ -69,6 +69,35 @@
             line-height: 1.8;
             max-width: 900px;
             margin: 0 auto 30px;
+        }
+
+        /* قسم القيم والرؤية والرسالة والأهداف */
+        .values-goals-section {
+            background-color: #ffffff;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .values-goals-section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .values-goals-section h3 {
+            font-size: 30px;
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+
+        .values-goals-section p, .values-goals-section ul {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .values-goals-section ul {
+            list-style-type: square;
+            margin-left: 20px;
         }
 
         footer {
@@ -95,6 +124,40 @@
     <div class="about-content" data-aos="fade-up">
         <h1>نبذة عن مؤسسة حمد الطبية</h1>
         <p>تأسست مؤسسة حمد الطبية في عام 1982 وهي مؤسسة رائدة في مجال الرعاية الصحية في دولة قطر. تهدف المؤسسة إلى توفير الرعاية الصحية الشاملة للمرضى من خلال شبكة واسعة من المستشفيات والمرافق الصحية. تسعى المؤسسة لتقديم خدمات صحية عالية الجودة واحترافية على مدار الساعة، كما أنها تسهم في البحث الطبي والتعليم الطبي من خلال برامج التدريب المتقدمة.</p>
+    </div>
+
+    <!-- قسم القيم والرؤية والرسالة والأهداف -->
+    <div class="values-goals-section">
+        <h2>القيم، الرؤية، الرسالة والأهداف</h2>
+
+        <div class="section" data-aos="fade-up">
+            <h3>الرؤية</h3>
+            <p>أن نكون رائدين في توفير الرعاية الصحية الممتازة والمبتكرة لأفراد المجتمع.</p>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h3>الرسالة</h3>
+            <p>تقديم خدمات صحية عالية الجودة تعكس الالتزام بالمهنية والرعاية الإنسانية، من خلال بيئة صحية مبتكرة ومتطورة.</p>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h3>القيم</h3>
+            <ul>
+                <li>الاحترام</li>
+                <li>الاحترافية</li>
+                <li>الشفافية</li>
+                <li>الابتكار</li>
+            </ul>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h3>الأهداف</h3>
+            <ul>
+                <li>تحقيق أفضل مستويات الرعاية الصحية</li>
+                <li>توفير بيئة طبية آمنة وفعالة</li>
+                <li>الابتكار في تقديم الحلول العلاجية</li>
+            </ul>
+        </div>
     </div>
 
     <!-- إضافة مكتبة AOS لتفعيل التأثيرات -->
