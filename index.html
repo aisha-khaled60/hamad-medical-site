@@ -1,132 +1,121 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مؤسسة حمد الطبية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
+        /* خلفية متدرجة للموقع */
         body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #f7f7f7;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            direction: rtl;
-            text-align: right;
         }
 
-        header, footer {
-            background-color: #006D77;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
+        /* تصميم شريط التنقل */
         nav {
-            background-color: #EDF6F9;
-            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
-        nav a {
-            margin: 0 10px;
+        nav ul li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            color: #006D77;
+            font-size: 20px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+
+        /* تصميم النصوص داخل الصفحة */
+        .main-content {
+            text-align: center;
+            padding-top: 100px; /* لتجنب تغطيته بشريط التنقل */
+        }
+
+        .main-content h1 {
+            font-size: 50px;
             font-weight: bold;
+            margin-bottom: 20px;
         }
 
-        section {
-            background-color: #ffffff;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
-
-        section h2 {
-            color: #006D77;
-            margin-bottom: 10px;
-        }
-
-        section ul {
-            padding-right: 20px;
+        .main-content p {
+            font-size: 20px;
             line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
         }
 
-        section img {
-            margin-top: 10px;
-            width: 100%;
-            max-width: 500px;
-            border-radius: 12px;
+        /* تأثيرات عند التمرير */
+        .aos-item {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        .hero-image {
+        /* قسم الفوتر */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
             width: 100%;
-            max-height: 400px;
-            object-fit: cover;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>مؤسسة حمد الطبية</h1>
-    </header>
 
-    <img class="hero-image" src="https://www.hamad.qa/EN/news/PublishingImages/HMC-Header.jpg" alt="واجهة مؤسسة حمد الطبية">
-
+    <!-- شريط التنقل -->
     <nav>
-        <a href="index.html">الرئيسية</a>
-        <a href="about-hamad-page.html">حول المؤسسة</a>
-        <a href="#vision">الرؤية</a>
-        <a href="#mission">الرسالة</a>
-        <a href="#values">القيم</a>
-        <a href="#goals">الأهداف</a>
-        <a href="#gallery">الصور</a>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about-hamad-page.html">عن المؤسسة</a></li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
     </nav>
 
-    <section id="vision">
-        <h2>الرؤية</h2>
-        <p>أن تكون مؤسسة حمد الطبية نموذجًا رائدًا في تقديم خدمات الرعاية الصحية المتكاملة والآمنة في المنطقة.</p>
-    </section>
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content" data-aos="fade-up">
+        <h1>مرحبا بكم في مؤسسة حمد الطبية</h1>
+        <p>نحن نقدم رعاية صحية عالية الجودة لجميع أفراد المجتمع. نعمل على توفير بيئة صحية تهدف إلى تحسين جودة حياة المرضى وعائلاتهم.</p>
+    </div>
 
-    <section id="mission">
-        <h2>الرسالة</h2>
-        <p>تقديم خدمات صحية متميزة وآمنة ترتكز على احتياجات المريض وتدعم التطوير المهني والبحث العلمي والابتكار.</p>
-    </section>
+    <!-- إضافة مكتبة AOS لتفعيل التأثيرات -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // تفعيل التأثيرات
+    </script>
 
-    <section id="values">
-        <h2>القيم الأساسية</h2>
-        <ul>
-            <li>الاحترام المتبادل</li>
-            <li>الرحمة</li>
-            <li>الشفافية</li>
-            <li>السلامة والجودة</li>
-            <li>التميز في الأداء</li>
-            <li>العمل الجماعي</li>
-        </ul>
-    </section>
-
-    <section id="goals">
-        <h2>الأهداف</h2>
-        <ul>
-            <li>تحسين جودة وسلامة الرعاية الصحية.</li>
-            <li>دعم التعليم والتدريب المستمر لمقدمي الرعاية.</li>
-            <li>تعزيز البنية التحتية التقنية والطبية.</li>
-            <li>توسيع نطاق الخدمات لتغطية احتياجات المجتمع.</li>
-            <li>تعزيز ثقافة الابتكار والتطوير المستدام.</li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>صور من داخل المؤسسة</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Hamad_General_Hospital.jpg/800px-Hamad_General_Hospital.jpg" alt="مستشفى حمد العام">
-    </section>
-
+    <!-- الفوتر -->
     <footer>
-        &copy; 2025 مؤسسة حمد الطبية - جميع الحقوق محفوظة
+        <p>&copy; 2025 مؤسسة حمد الطبية. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
-
 </html>
